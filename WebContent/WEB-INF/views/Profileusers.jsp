@@ -57,7 +57,7 @@ value="Login" size="65" maxlength="40" ;style="background-color:" #10030f="" typ
 
         h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
-    <h2 style=" margin-top: -180px;margin-left: 300px;"> <label form="Descrizione artista"></label></h2>
+    <h2 style=" margin-top: -180px;margin-left: 300px;"> <label ></label></h2>
     <li>
       <h3 style=" margin-top: px;margin-left: 500px;">
         <ul>

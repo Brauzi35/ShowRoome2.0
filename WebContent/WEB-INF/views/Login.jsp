@@ -1,15 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>Prova</title>
-  </head>
-  <!--  <body style="background-color: white; background-image: url(&quot;https://www.cilentonotizie.it/public/images/11122020_foto-PalaSele_phangelotortorella_03.jpg&quot;);"><img
+    <style  type="text/css">
+p{
 
-      src="https://image.flaticon.com/icons/png/512/26/26362.png" alt="" style="width: 93px; height: 73px; margin-left: -2px;"><br> -->
-    <h1 style="margin-top: -45.5667px; margin-left: 115px;"> ShowRoome </h1>
-    <p style="margin-top: -45.5667px; margin-left: 115px;"> </p>
+ color:red;
+
+}
+h1{
+
+background-colo:yellow
+
+}
+
+
+
+
+
+
+
+
+</style>
+  </head>
+    <h1 style="margin-top: px; margin-left: 115px;"> ShowRoome </h1>
+    <p style="margin-top: -60px; margin-left: 115px;"> </p>
     <h3 style=" margin-top: 150px;margin-left: 480px;">
      <form action="LoginControllerWeb" method="post">
       <ul>
@@ -24,7 +42,7 @@
 
  
 
-          style="height: 25px; width: 225px;" type="text">
+          style="height: 25px; width: 225px;" type="password">
       </ul>
       <ul>
         <input  value="email" id="email" name="email" style="height: 25px; width: 225px;"
@@ -46,7 +64,6 @@
         <option value='2'>Performer</option>
      <option value='3'>Sponsor</option>
 
- 
 
         
  
@@ -66,10 +83,11 @@
       </form>
     <form action="RegisterController" method="get">
       <button name="register" style="height: 35px; width: 90px; margin-top: 20px; margin-left: 595px; background-color: #4d4d4d;">Registrati</button></form>
-    <form action="register" method="get">
+    <form action="LoginControllerWeb" method="get">
       <button name="Informazioni" style="height: 35px; width: 90px; margin-top: 20px; margin-left: 595px; background-color: #4d4d4d;">Continua
         senza login</button></form>
     
     
+ 
   </body>
 </html>

@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@page import = "logic.appcontroller.ReviewController"  %>
+    <%@page import = "logic.applicationController.ReviewController"  %>
     <%@page import = "logic.bean.ReviewBean"%>
     <%@ page import = "java.util.List" %>
+    <%@page import = " logic.utils.SessionUser" %>
+    
     <%
 
     String strParam = (String)session.getAttribute("artist2");
@@ -11,6 +13,8 @@
     String review1 = "";
     String review2 = "";
     String review3= "";
+    SessionUser su = SessionUser.getInstance();
+    String username = su.getUsername();
     %>
 <!DOCTYPE html>
 <html>
@@ -50,13 +54,15 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
+                  <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+             <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
+    
     <!-- Primo artista  -->
    
        <p style="margin-top: 260px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
-        h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
+        style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
-    <h2 style=" margin-top: -180px;margin-left: 300px;"> <label name="artistname" id="artistname" form="test"><%= strParam %></label></h2>
   <li> <h3 style=" margin-top: px;margin-left: 300px;"><ul>
     <% 
     //intuizione assoluta

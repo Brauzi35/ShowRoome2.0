@@ -8,27 +8,34 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-
-@WebServlet("/ContattaArtista")
-public class ContattaArtista extends HttpServlet {
+/**
+ * Servlet implementation class Logout
+ */
+@WebServlet("/Logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Logout() {
+        super();
+    }
 
-	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// not used
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name = request.getParameter("name");
-		HttpSession session = request.getSession();
-		session.setAttribute("artistNameSponsor", name);
-		RequestDispatcher dispatcher2 = request.getRequestDispatcher("/WEB-INF/views/HostShowWeb.jsp");
-		dispatcher2.forward(request, response);
+		RequestDispatcher dispatcher1 = request.getRequestDispatcher("/WEB-INF/views/Login.jsp");
+		dispatcher1.forward(request, response);
 	}
 
 }

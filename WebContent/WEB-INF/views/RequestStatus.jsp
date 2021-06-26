@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
-    <%@page import = "logic.appcontroller.RSSApplicationController"  %>
+    <%@page import = "logic.applicationController.RSSApplicationController"  %>
     <%@page import = "logic.bean.RequestedShowBean"  %>
+        <%@page import = "logic.utils.SessionSponsor"  %>
+    
     <%
     RSSApplicationController rac = new RSSApplicationController();
+    SessionSponsor ss = SessionSponsor.getInstance();
+	String username = ss.getUsername();
     RequestedShowBean rsb = null;
     String control = "ok"; 
     String state = "idle";
@@ -54,13 +58,17 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
+    
+     <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+         <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
+    
     <% if(control.equals("ok") ){ %>
-    <h1>Le tue richieste:</h1>
+    <h1 style="margin-top: 120px;" >Le tue richieste:</h1>
      <p style="margin-top: 210px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
  
 
-        h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
+         style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
     
    <p     style="margin-top: -190px; margin-left: 600px;"  >
@@ -119,7 +127,7 @@
    <% }%>
    
    <% if(control.equals("no")){ %>
-   <h1>Le tue richieste:</h1>
+   <h1 style="margin-top: 120px;">Le tue richieste:</h1>
      <p style="margin-top: 70px; margin-left: 600px;"  ><h1>Al momento non ci sono richieste effettuate</h1></p>
     
 	   

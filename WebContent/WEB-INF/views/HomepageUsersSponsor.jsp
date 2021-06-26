@@ -1,14 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
-   <%@page import = "logic.appcontroller.HostShowSponsorController"  %>
-   <%@page import = "logic.appcontroller.HomepageUserController"  %>
+   <%@page import = "logic.applicationController.HostShowSponsorController"  %>
+   <%@page import = "logic.applicationController.HomepageUserController"  %>
    <%@page import = "logic.bean.ArtistBean"  %>
     <%@ page import = "java.util.List" %>
+        <%@page import = "logic.utils.SessionSponsor"  %>
+    
    
     <%
     HostShowSponsorController hssc = new HostShowSponsorController();
     List<String> artists = hssc.buildArtistStringArray();
     HomepageUserController huc = new HomepageUserController();
+    SessionSponsor ss = SessionSponsor.getInstance();
+	String username = ss.getUsername();
     %>
   
 <!DOCTYPE html>
@@ -46,10 +50,12 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
+      <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+         <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
  
     <!-- Primo artista  -->
    
-    <p style="margin-top: 250px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
+    <p style="margin-top: 350px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
  
 
@@ -65,7 +71,7 @@
 
  
 
-    <hr align=”left” size=”1″ width=”300″ color=”white” noshade style="margin-top: 100px;">
+    <hr style="align:left;size:1 ;width:1200px ;color:black; noshade;"></hr>
 
  
 
@@ -80,7 +86,7 @@
 
  
 
-        h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
+         style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
      <form action="ContattaArtista" method="post"  style=" margin-top: -50px;">
     <h2 style=" margin-top: -180px;margin-left: 300px;"> <label ><%= artists.get(1) %></input></h2>
@@ -91,7 +97,7 @@
  
  
 
-    <hr align=”left” size=”1″ width=”300″ color=”white” noshade style="margin-top: 100px;">
+    <hr style="align:left;size:1 ;width:1200px ;color:black; noshade;"></hr>
   
   
   
@@ -115,7 +121,7 @@
 
  
 
-    <hr align=”left” size=”1″ width=”300″ color=”white” noshade style="margin-top: 100px;">
+    <hr style="align:left;size:1 ;width:1200px ;color:black; noshade;"></hr>
   
    <form action="&lt;%= request.getContextPath() %&gt;/register" method="post">
         <p style="margin-top:65px;margin-left:410px;"><button name="Chart" style="height: 35px; width: 95px; margin-top: -48px; margin-left: 160px;background-color: #4D4D4D;">Vedi altri</button></p>

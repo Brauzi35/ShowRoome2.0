@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+        <%@page import = " logic.utils.SessionUser" %>
+    
+  <%
+  SessionUser su = SessionUser.getInstance();
+  String username = su.getUsername();
+  
+  
+  %>
+    
 <!DOCTYPE html>
 <html>
   <head>
@@ -39,6 +48,8 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
+                            <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+               <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
       
      <h1 style="margin-top:200px; margin-left: 450px;"><form action="TastoChart" method="get"> 
      <input name="artist" value="cercaArtista" id="artist" tyle="height:30px;width:300px;"></input>

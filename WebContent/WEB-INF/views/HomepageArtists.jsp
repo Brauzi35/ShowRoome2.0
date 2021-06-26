@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-<%@page import = "logic.appcontroller.SessionArtistController"  %>
+<%@page import = "logic.applicationController.SessionArtistController"  %>
 <%@page import = "logic.utils.SessionArtist"  %>
 
 <% 
 	SessionArtistController sac = new SessionArtistController();
 	sac.sessionArtistSetup();
 	SessionArtist instanceA = SessionArtist.getInstance();
+    String username = instanceA.getUsername();
+
  %>
 
 
@@ -52,19 +54,18 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
-    <h1 style="margin-top: -159px; margin-left: 1170px;">
-      <form action="Login" method="post"><input
-
- 
-
-value="Login" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"></form>
+              <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+      <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
+    
+    <h1 style="margin-top: -20px; margin-left: 1170px;">
+     
     </h1>
     <!-- Primo artista  -->
     <p style="margin-top: 300px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
  
 
-        h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
+        style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
     <h2 style=" margin-top: -180px;margin-left: 300px;"> <label form="Descrizione artista"></label></h2>
     <li>

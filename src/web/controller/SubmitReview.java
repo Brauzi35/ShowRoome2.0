@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import logic.appcontroller.ReviewController;
-import logic.exceptions.DuplicateReviewException;
+import logic.applicationController.ReviewController;
 
 @WebServlet("/SubmitReview")
 public class SubmitReview extends HttpServlet {
@@ -34,11 +33,7 @@ public class SubmitReview extends HttpServlet {
 		HttpSession session = request.getSession();
 		String artist = (String)session.getAttribute("artist2");
 		ReviewController rc = new ReviewController();
-		try {
-			rc.saveReview(artist, review);
-		} catch (DuplicateReviewException e) {
-			e.printStackTrace();
-		}
+		rc.saveReview(artist, review);
 		RequestDispatcher dispatcher4 = request.getRequestDispatcher("/WEB-INF/views/Search.jsp");
 	    dispatcher4.forward(request, response);
 	}

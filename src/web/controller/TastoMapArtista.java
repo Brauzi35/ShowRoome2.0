@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import logic.appcontroller.HomepageArtistController;
-import logic.appcontroller.MapController;
+import logic.applicationController.HomepageArtistController;
+import logic.applicationController.MapController;
 import logic.bean.EventBean;
 import logic.bean.PlaceBean;
 import logic.exceptions.EmptyFieldException;
@@ -24,10 +24,11 @@ import logic.utils.SessionSponsor;
 public class TastoMapArtista extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     int ringbell=0;
+    String MapArtistJsp = "/WEB-INF/views/MapArtist.jsp";
+    String book= "already booked";
     
     public TastoMapArtista() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	
@@ -59,12 +60,12 @@ public class TastoMapArtista extends HttpServlet {
         }
 		
 		if(ringbell==0) {
-			session.setAttribute("Posto", "already booked");
-    		session.setAttribute("Indirizzo", "already booked");
+			session.setAttribute("Posto", book);
+    		session.setAttribute("Indirizzo", book);
     		session.setAttribute("Capienza", 0);
 		}
 		ringbell=0;
-		RequestDispatcher dispatcherN = request.getRequestDispatcher("/WEB-INF/views/MapArtist.jsp");
+		RequestDispatcher dispatcherN = request.getRequestDispatcher( MapArtistJsp);
     	dispatcherN.forward(request, response);
 	}
 		
@@ -78,7 +79,7 @@ public class TastoMapArtista extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("Hosting", name);
-			RequestDispatcher dispatcherN = request.getRequestDispatcher("/WEB-INF/views/MapArtist.jsp");
+			RequestDispatcher dispatcherN = request.getRequestDispatcher( MapArtistJsp);
 	    	dispatcherN.forward(request, response);
 	    	
 		}

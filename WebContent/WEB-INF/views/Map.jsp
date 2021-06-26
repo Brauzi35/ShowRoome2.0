@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+        <%@page import = " logic.utils.SessionUser" %>
+    
     <%
     String place = (String)session.getAttribute("mapPlace");
     String artist = (String)session.getAttribute("mapArtist");
     String description = (String)session.getAttribute("mapDescription");
-    
+    SessionUser su = SessionUser.getInstance();
+    String username = su.getUsername();
     %>
     
 <!DOCTYPE html>
@@ -33,6 +36,7 @@
     </h1>
     <h1 style="margin-top: -74px;margin-left:px ;background-color: white;">
       <style>
+      
 #rectangle {
     width: 1250px;
     height: 50px;
@@ -40,6 +44,9 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
+    <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1> 
+             <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
+    
     
  
  <div id="container2"  style="display:">
@@ -53,23 +60,19 @@
 </div>
  
  <form action ="TastoMap" method = "get">
- <div class="container">
-	 <img src="https://www.researchgate.net/profile/Francesco-Mensa/publication/330994606/figure/fig1/AS:724708081283073@1549795279179/Figura-125-Mappa-della-citta-di-Roma-I-punti-colorati-indicano-i-luoghi-visitati.png" alt="" style="width: 976x; height: 976px; margin-left: -2px; overflow:hidden; z-index:-1">
+ <div class="container"   style="   margin-left: -2px; margin-top: 80px;">
+	 <img src="https://www.researchgate.net/profile/Francesco-Mensa/publication/330994606/figure/fig1/AS:724708081283073@1549795279179/Figura-125-Mappa-della-citta-di-Roma-I-punti-colorati-indicano-i-luoghi-visitati.png" alt="" style="width: 976x; height: 976px; margin-left: -2px; margin-top:50px; overflow:hidden; z-index:-1">
  	
-<button type="submit" name="action" value="Eur" onclick="myFunction()" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 750px; position:absolute; margin-left:-600px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
-<button  type="submit" name="action" value="Villa" onclick="myFunction()" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 470px; position:absolute; margin-left:-650px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
-<button  type="submit" name="action" value="Pigneto" onclick="myFunction()" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 470px; position:absolute; margin-left:-350px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
-<button  type="submit" name="action" value="Statuario" onclick="myFunction()" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 700px; position:absolute; margin-left:-270px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
+<button id="amo" type="submit" name="action" value="Eur" onclick="myFunction(amo,yellow)" style="width: 60x; height: 60px; background-color: Transparent;border:none; margin-top: 750px; position:absolute; margin-left:-600px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
+<button  id="amo2"  type="submit" name="action" value="Villa" onclick="myFunction(amo2,pink)" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 470px; position:absolute; margin-left:-650px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
+<button  id="amo3" type="submit" name="action" value="Pigneto" onclick="myFunction(green)" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 470px; position:absolute; margin-left:-350px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
+<button  id="amo4" type="submit" name="action" value="Statuario" onclick="myFunction()" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 700px; position:absolute; margin-left:-270px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>
 </div>
 </form>
-
+                                                                                 
 <script>
-function myFunction() {
-    elem=document.getElementById("container2");
-    elem.style.display="block";
-
- 
-
+function myFunction(element_id, value) {
+	document.getElementById(element_id).style.border.color = value;
 }
 </script>
  

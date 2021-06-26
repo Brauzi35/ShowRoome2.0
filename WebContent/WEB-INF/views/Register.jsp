@@ -5,9 +5,7 @@
   <head>
     <title>Prova</title>
   </head>
-  <!--  <body style="background-color: white; background-image: url(&quot;https://www.cilentonotizie.it/public/images/11122020_foto-PalaSele_phangelotortorella_03.jpg&quot;);"><img
-
-      src="https://image.flaticon.com/icons/png/512/26/26362.png" alt="" style="width: 93px; height: 73px; margin-left: -2px;"><br> -->
+ 
     <h1 style="margin-top: -45.5667px; margin-left: 115px;"> ShowRoome </h1>
     <p style="margin-top: -45.5667px; margin-left: 115px;"> </p>
     <h3 style=" margin-top: 150px;margin-left: 480px;">

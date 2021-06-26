@@ -1,16 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
-    <%@page import = "logic.appcontroller.RequestsArtistController"  %>
+    <%@page import = "logic.applicationController.RequestsArtistController"  %>
     <%@page import = "logic.bean.RequestedShowBean"  %>
     <%@ page import = "java.util.List" %>
+            <%@page import = "logic.utils.SessionArtist"  %>
+    
     <%
     RequestsArtistController rac = new RequestsArtistController();	
     List<String> list = rac.buildRequestsStringArray();
     String state = "good";
     RequestedShowBean show = null;
+    SessionArtist instanceA = SessionArtist.getInstance();
+    String username = instanceA.getUsername();
     try{
     	show = rac.getRequestedShowBean(list.get(0));
-       } catch (ArrayIndexOutOfBoundsException e){
+       } catch (Exception e){
     	  state = "no requests found";
       	
        }
@@ -29,16 +33,12 @@
       alt="" style="width: 93px; height: 73px; margin-left: -2px;"><br>
    
     <h1 style="margin-top: -45.5667px; margin-left: 115px;">  Showroome Sponsor</h1>  
-    <h1 style="margin-top: -60px; margin-left: 1000px;"> <input value="" size="18"
 
  
 
-        maxlength="40" type="text"> </h1>
-     <h1 style="margin-top:-58px; margin-left: 1150px;"><form action="&lt;%= request.getContextPath() %&gt;/register" method="post"> <input value="Search artist"
 
  
 
-                                                                                                                                            size="15" maxlength="40" ;style="background-color:" #993300="" type="submit"></form> </h1>
    <h1 style="margin-top:84px;margin-left:3px;">
        <form action="TastoChart" method="post">
         <p style="margin-top:-74px;margin-left:160px;"><button name="Profile" style="height: 35px ; width: 95px; margin-top: -48px; margin-left: 570px;background-color: #4D4D4D;">Chart</button>
@@ -65,10 +65,13 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
+                      <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+          <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
+    
 
 <% if(state.equals("no requests found")){ %>
- <h1>Le tue Proposte:</h1>
-	<p style="margin-top: 70px; margin-left: 600px;"  ><h1>Al momento non ci sono proposte</h1></p>
+ <h1 style="margin-top: 110px;">Le tue Proposte:</h1>
+	<p style="margin-top: 110px; margin-left: 600px;"><h1>Al momento non ci sono proposte</h1></p>
 <% }%>
 
 <!--              qui mettere if   -->
@@ -78,7 +81,7 @@
 
  
 
-        h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
+        style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
     
    <p     style="margin-top: -190px; margin-left: 600px;"  >
@@ -94,14 +97,10 @@
         
         
         <ul>
-          <textarea   readonly="readonly" value="" id="Cognome" name="Cognome"
-
- 
-
-            style="resize:none;height: 80px; width: 300px;" type="text"><%= show.getDescription() %></textarea>
+          <textarea   readonly="readonly"  id="Cognome" name="Cognome" style="resize:none;height: 80px; width: 300px;" type="text"><%= show.getDescription() %></textarea>
         </ul>
         <ul>
-          <textarea  readonly="readonly"  value="" id="password" name="password"
+          <textarea  readonly="readonly"   id="password" name="password"
 
  
 
@@ -112,8 +111,8 @@
            
       </h3>
     </li>
-    <input readonly="readonly" id="Submit" name="button" type="submit" value="Accetta"  style="resize:none;height: 35px; width: 95px; margin-top: -600px; margin-left: 1050px;background-color:purple ;"> </input>
-      <input readonly="readonly" id="Submit" name="button" type="submit" value="Rifiuta"  style="resize:none;height: 35px; width: 95px; margin-top: -600px; margin-left: 950px;background-color:purple ;"> </input>
+    <input readonly="readonly" id="Submit" name="button" type="submit" value="Accetta"  style="resize:none;height: 35px; width: 95px; margin-top: -600px; margin-left: 1050px;background-color:purple ;"> 
+      <input readonly="readonly" id="Submit" name="button" type="submit" value="Rifiuta"  style="resize:none;height: 35px; width: 95px; margin-top: -600px; margin-left: 950px;background-color:purple ;"> 
   
    </p>
 

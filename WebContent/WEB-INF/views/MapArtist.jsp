@@ -1,8 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import = "logic.utils.SessionArtist"  %>
+    
     <%
     String place = (String)session.getAttribute("Posto");
     String address = (String)session.getAttribute("Indirizzo");
+    SessionArtist instanceA = SessionArtist.getInstance();
+    String username = instanceA.getUsername();
+
     
     int capacity = (int)session.getAttribute("Capienza");
     %>
@@ -49,13 +54,12 @@
 }
 </style> <div id="rectangle"></div>
     </h1>
-    <h1 style="margin-top: -159px; margin-left: 1170px;">  <form action="Login" method="post"><input value="Login" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"></form> </h1>
-    <h1 style="margin-top:110px; margin-left: px;"> <!--     <script async
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5PwOZsmYoQIu0Ax2J7hjot87OQuUsB90&callback=initMap">
-</script>  -->
-    </h1>
+                  <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+          <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
+    
+    
  
- <div id="container2"  style="display:">
+ <div id="container2"  style="margin-top: 100px;">
   <h1> <label  style="width: 300x; height: 40px;position:absolute;margin-top: 30px;z-index:0;margin-left:1000px"></label>    </h1> 
 <textarea name="text1" id="text1" readonly="readonly";  style="resize: none; width: 300x; height: 40px;position:absolute;margin-top: 100px;z-index:0;margin-left:1000px"><%= place %></textarea>
 <textarea name="text2" id="text2" readonly="readonly";  style="resize: none; width: 300x; height: 40px;position:absolute;margin-top: 180px;z-index:0;margin-left:1000px"><%= address %></textarea>
@@ -70,7 +74,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5PwOZsmYoQIu0Ax2J7hjot87
 </div>
  
  <form action ="TastoMapArtista" method = "post">
- <div class="container">
+ <div class="container" style=" margin-top: 140px;"">
      <img src="https://www.researchgate.net/profile/Francesco-Mensa/publication/330994606/figure/fig1/AS:724708081283073@1549795279179/Figura-125-Mappa-della-citta-di-Roma-I-punti-colorati-indicano-i-luoghi-visitati.png" alt="" style="width: 976x; height: 976px; margin-left: -2px; overflow:hidden; z-index:-1">
      
 <button type="submit" name="action" value="Eur" onclick="myFunction()" style="width: 60x; height: 60px; background-color: Transparent; border: none; margin-top: 750px; position:absolute; margin-left:-600px; float:left;"><img src="https://image.flaticon.com/icons/png/512/48/48703.png" style="width: 55x; height: 55px;" /></button>

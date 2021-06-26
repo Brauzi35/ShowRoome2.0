@@ -3,11 +3,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
     <%@page import = " logic.bean.SponsoredShowBean" %>
-    <%@page import = " logic.appcontroller.SSUserController" %>
+    <%@page import = " logic.applicationController.SSUserController" %>
     <%@ page import = "java.util.List" %>
      <%@ page import = "java.util.ArrayList" %>
+         <%@page import = " logic.utils.SessionUser" %>
+     
 <%
 SSUserController ssuc = new SSUserController();
+SessionUser su = SessionUser.getInstance();
+String username = su.getUsername();
 List<String> titles = ssuc.buildShowStringArray();
 String empty = "no";
 try{
@@ -78,6 +82,9 @@ for (int i=0; i<titles.size(); i++){
 }​​​​​​​
 </style> <div id="rectangle"></div>
     </h1>
+                      <h1 style="margin-top: -159px; margin-left: 1100px;"> <input value=<%=username %> size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1>
+             <form action="Logout" method="post">          <h1 style="margin-left: 1190px;margin-top: -57px;" > <input value="logout" size="65" maxlength="40" ;style="background-color:" #10030f="" type="submit"> </h1></form> 
+    
 <%   
 String ok1 = "ok";
 try{
@@ -94,14 +101,14 @@ try{
 
         h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
-    <h2 style=" margin-top: -180px;margin-left: 300px;"> <label form="Descrizione artista"><%= lssb.get(0).getTitle() %></label></h2>
+    <h2 style=" margin-top: -180px;margin-left: 300px;"> <label><%= lssb.get(0).getTitle() %></label></h2>
     <h3 style=" margin-top: px;margin-left: 300px;"> <textarea id="story" name="story" style=" resize: none ;"rows="5" cols="80" readonly disabled="disabled"><%= lssb.get(0).getDescription() %></textarea></h3>
 
- <label form="Strada artista" style=" margin-top: px;margin-left: 300px;"><%= lssb.get(0).getArtist() %></label>
-     <label form="Tipo di artista" style=" margin-top: px;margin-left: 50px;"><%= lssb.get(0).getLocation() %></label>
+ <label style=" margin-top: px;margin-left: 300px;"><%= lssb.get(0).getArtist() %></label>
+     <label  style=" margin-top: px;margin-left: 50px;"><%= lssb.get(0).getLocation() %></label>
 
 
-    <hr align=â€leftâ€ size=â€1â€³ width=â€300â€³ color=black noshade>
+    <hr style="align:left;size:1 ;width:1200px ;color:black; noshade;"></hr>
 
 
 
@@ -133,7 +140,7 @@ Artista molto affermato nella puglia Borbonica gestiva uno spaccio di minori e p
          <label form="Tipo di artista" style=" margin-top: px;margin-left: 50px;"></label>
 
 
-    <hr align=â€leftâ€ size=â€1â€³ width=â€300â€³ color=black noshade>
+    <hr style="align:left;size:1 ;width:1200px ;color:black; noshade;"></hr>
   
   
   <% } %>
@@ -163,7 +170,7 @@ Artista molto affermato nella puglia Borbonica gestiva uno spaccio di minori e p
          <label form="Tipo di artista" style=" margin-top: px;margin-left: 50px;"></label>
 
 
-    <hr align=â€leftâ€ size=â€1â€³ width=â€300â€³ color=black noshade>
+    <hr style="align:left;size:1 ;width:1200px ;color:black; noshade;"></hr>
   <% } %>
    <form action="&lt;%= request.getContextPath() %&gt;/register" method="post">
         <p style="margin-top:65px;margin-left:410px;"><button name="Chart" style="height: 35px; width: 95px; margin-top: -48px; margin-left: 160px;background-color: #4D4D4D;">Vedi altri</button></p>
@@ -172,8 +179,7 @@ Artista molto affermato nella puglia Borbonica gestiva uno spaccio di minori e p
   
 
 
-    ​​​​​​​
-     
+
  
   
   </body>

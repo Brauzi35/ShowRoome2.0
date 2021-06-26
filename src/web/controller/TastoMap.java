@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import web.model.Employee;   
 import javax.servlet.http.HttpSession;
 
-import logic.appcontroller.MapController;
+import logic.applicationController.MapController;
 import logic.bean.EventBean;
 import logic.utils.SessionArtist;
 import logic.utils.SessionSponsor;
@@ -24,15 +24,15 @@ import logic.utils.SessionUser;
 @WebServlet("/TastoMap")
 public class TastoMap extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Employee Utente = new Employee();
     String TipoUtente;
     SessionArtist sa = SessionArtist.getInstance();
 	SessionSponsor ss = SessionSponsor.getInstance();
+	String message ="there is no show here";
+	 String MapArtistJsp = "/WEB-INF/views/MapArtist.jsp";
 	int ringbell = 0;
 	
     public TastoMap() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -58,19 +58,19 @@ public class TastoMap extends HttpServlet {
         }
         
         if(ringbell==0) {
-        	session.setAttribute("mapPlace", "there is no show here");
-    		session.setAttribute("mapArtist", "there is no show here");
-    		session.setAttribute("mapDescription", "there is no show here");
+        	session.setAttribute("mapPlace", message);
+    		session.setAttribute("mapArtist", message);
+    		session.setAttribute("mapDescription",message);
         }
         
         ringbell=0;
         SessionUser su = SessionUser.getInstance();
         if(sa.getUsername()!=null) {
-        	RequestDispatcher dispatcherN = request.getRequestDispatcher("/WEB-INF/views/MapArtist.jsp");
+        	RequestDispatcher dispatcherN = request.getRequestDispatcher(MapArtistJsp);
         	dispatcherN.forward(request, response);
         }
         if(su.getId()==3) {
-        	RequestDispatcher dispatcherM = request.getRequestDispatcher("/WEB-INF/views/MapArtist.jsp");
+        	RequestDispatcher dispatcherM = request.getRequestDispatcher(MapArtistJsp);
         	dispatcherM.forward(request, response);
         }
         else {
@@ -85,7 +85,7 @@ public class TastoMap extends HttpServlet {
 		
 		
 	    if (sa.getUsername()!=null){
-	    RequestDispatcher dispatcher2 = request.getRequestDispatcher("/WEB-INF/views/MapArtist.jsp");
+	    RequestDispatcher dispatcher2 = request.getRequestDispatcher(MapArtistJsp);
 		dispatcher2.forward(request, response);
 	    }
 	    if (ss.getUsername()!=null){

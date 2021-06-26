@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import logic.appcontroller.RSSApplicationController;
+import logic.applicationController.RSSApplicationController;
 import logic.utils.SessionSponsor;
 
 /**

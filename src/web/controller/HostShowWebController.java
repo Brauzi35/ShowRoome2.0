@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import logic.dao.SponsorDao;
-import logic.exceptions.PendingRequestException;
 import logic.utils.SessionUser;
 
 
@@ -47,12 +46,7 @@ public class HostShowWebController extends HttpServlet {
 		String desc = request.getParameter("descrizione");
 		
 		SponsorDao sd = new SponsorDao();
-   	    try {
-			sd.createSSQueue(title, artist, "no", desc);
-		} catch (PendingRequestException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+   	    sd.createSSQueue(title, artist, "no", desc);
    	    
    	    RequestDispatcher dispatcher2 = request.getRequestDispatcher("/WEB-INF/views/RequestStatus.jsp");
 		dispatcher2.forward(request, response);
