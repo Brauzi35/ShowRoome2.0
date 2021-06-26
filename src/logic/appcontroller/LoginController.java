@@ -1,4 +1,4 @@
-package logic.applicationController;
+package logic.appcontroller;
 
 import javax.security.auth.login.LoginException;
 
@@ -15,7 +15,7 @@ import logic.utils.SessionUser;
 
 public class LoginController {
 	
-	public GeneralUserBean login(String username, String password) throws Exception {
+	public GeneralUserBean login(String username, String password) throws Exception{
 		
 		GeneralUserDao gud = new GeneralUserDao();
 		GeneralUser result = gud.login(username, password); //calls the dao login
@@ -27,7 +27,7 @@ public class LoginController {
 		return gu;
 	}
 	
-	public ArtistBean artistLogin(String username, String password) throws Exception {
+	public ArtistBean artistLogin(String username, String password){
 		
 		ArtistDao ad = new ArtistDao();
 		Artist result = ad.artistLogin(username, password);

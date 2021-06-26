@@ -1,4 +1,4 @@
-package logic.applicationController;
+package logic.appcontroller;
 
 import logic.dao.ArtistDao;
 import logic.dao.GeneralUserDao;
@@ -18,7 +18,7 @@ public class RegistrationAppController {
 	}
 	
 	public void sponsorReg(String username, String password, String activity, String capacity, String description) {
-		
+		//void for now
 	}
 	
 	public int newUserId() {

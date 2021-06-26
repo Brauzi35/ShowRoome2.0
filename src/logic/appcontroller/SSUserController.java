@@ -1,12 +1,12 @@
-package logic.applicationController;
+package logic.appcontroller;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import logic.bean.SponsoredShowBean;
-import logic.dao.ArtistDao;
+
 import logic.dao.SponsoredShowDao;
-import logic.entity.Artist;
+
 import logic.entity.SponsoredShow;
 
 public class SSUserController {

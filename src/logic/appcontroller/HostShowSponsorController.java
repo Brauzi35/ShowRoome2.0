@@ -1,20 +1,18 @@
-package logic.applicationController;
+package logic.appcontroller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import logic.bean.ReviewBean;
 import logic.dao.ArtistDao;
 import logic.dao.SponsorDao;
 import logic.entity.Artist;
-import logic.entity.Review;
 import logic.entity.Sponsor;
 import logic.utils.SessionSponsor;
 
 public class HostShowSponsorController {
 	public List<String> buildArtistStringArray(){
 		//this method builds the array needed for a listView gathering each free artist that can be contcted
-		List<String> artists = new ArrayList<String>();
+		List<String> artists = new ArrayList<>();
 		ArtistDao ad = new ArtistDao();
 		List<Artist> la = ad.getArtists();
 		for(int i = 0; i < la.size(); i++) {
@@ -35,7 +33,7 @@ public class HostShowSponsorController {
 	
 	public List<String> buildSponsorStringArray(){
 		//this method provides a string array which contains every sponsor username except for the sessionSponsor's one
-		List<String> sponsors = new ArrayList<String>();
+		List<String> sponsors = new ArrayList<>();
 		SponsorDao sd = new SponsorDao();
 		List<Sponsor> la = sd.getSponsors();
 		for(int i = 0; i < la.size(); i++) {

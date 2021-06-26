@@ -1,15 +1,13 @@
-package logic.applicationController;
+package logic.appcontroller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import logic.bean.ArtistBean;
-import logic.bean.EventBean;
+
 import logic.bean.ReviewBean;
 import logic.dao.ArtistDao;
 import logic.dao.ReviewDao;
 import logic.entity.Artist;
-import logic.entity.Event;
 import logic.entity.Review;
 import logic.exceptions.DuplicateReviewException;
 import logic.utils.SessionUser;

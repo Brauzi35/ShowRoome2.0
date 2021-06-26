@@ -1,4 +1,4 @@
-package logic.applicationController;
+package logic.appcontroller;
 
 import logic.dao.ArtistDao;
 import logic.entity.Artist;
@@ -18,10 +18,5 @@ public class SessionArtistController {
 		instanceA.setTalent(a.getTalent());
 	}
 	
-	public void update(String username, String email, String talent, String description) {
-		SessionArtist instanceA = SessionArtist.getInstance();
-		SessionUser instanceU = SessionUser.getInstance();
-		instanceU.setUsername(username);
-		//finire con implementazione del dao
-	}
+	
 }

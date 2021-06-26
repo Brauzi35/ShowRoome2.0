@@ -1,10 +1,10 @@
-package logic.applicationController;
+package logic.appcontroller;
 
-import logic.dao.ArtistDao;
+
 import logic.dao.SponsorDao;
-import logic.entity.Artist;
+
 import logic.entity.Sponsor;
-import logic.utils.SessionArtist;
+
 import logic.utils.SessionSponsor;
 import logic.utils.SessionUser;
 
@@ -19,6 +19,6 @@ public class SessionSponsorController {
 		instanceS.setDescription(s.getDescription());
 		instanceS.setCapacity(s.getCapacity());
 		instanceS.setPassword(s.getPassword());
-		instanceS.setActivity(s.getActivity());;
+		instanceS.setActivity(s.getActivity());
 	}
 }
