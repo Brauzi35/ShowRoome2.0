@@ -6,7 +6,7 @@
     <%@page import = " logic.bean.ArtistBean" %>
     <%@page import = " logic.utils.SessionUser" %>
     <%@ page import = "java.util.List" %>
-        <%@page import = " logic.applicationController.HomepageUserController" %>
+        <%@page import = " logic.appcontroller.HomepageUserController" %>
     <%	HomepageUserController huc = new HomepageUserController(); %>
 <%		List<EventBean> events = huc.liveEventsList();
 	SessionUser su = SessionUser.getInstance();

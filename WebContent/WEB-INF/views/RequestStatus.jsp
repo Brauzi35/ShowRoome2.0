@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
-    <%@page import = "logic.applicationController.RSSApplicationController"  %>
+    <%@page import = "logic.appcontroller.RSSApplicationController"  %>
     <%@page import = "logic.bean.RequestedShowBean"  %>
     <%
     RSSApplicationController rac = new RSSApplicationController();

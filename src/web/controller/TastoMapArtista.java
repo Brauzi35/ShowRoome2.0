@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import logic.applicationController.HomepageArtistController;
-import logic.applicationController.MapController;
+import logic.appcontroller.HomepageArtistController;
+import logic.appcontroller.MapController;
 import logic.bean.EventBean;
 import logic.bean.PlaceBean;
 import logic.exceptions.EmptyFieldException;

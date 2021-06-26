@@ -8,16 +8,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import logic.entity.Artist;
+
 import logic.entity.Sponsor;
 import logic.exceptions.PendingRequestException;
 import logic.utils.SessionSponsor;
 
 public class SponsorDao {
-	private static String USER = "root";
-	private static String PASS = "showroome";
-    private static String DB_URL = "jdbc:mysql://localhost:3306/prova?autoReconnect=true&useSSL=false";
-	private static String DRIVER_CLASS_NAME = "com.mysql.cj.jdbc.Driver";
+	private static String user = "root";
+	private static String pass = "showroome";
+    private static String dbUrl = "jdbc:mysql://localhost:3306/prova?autoReconnect=true&useSSL=false";
+	private static String driverClassName = "com.mysql.cj.jdbc.Driver";
+	
+	//strings declared for code smell avoidance
+	String u = "username";
+    String p = "password";
+    String a = "activity";
+    String c = "capacity";
+    String d = "description";
 	
 	public Sponsor getSponsor(String username) {
 		Statement stmt = null;
@@ -25,12 +32,11 @@ public class SponsorDao {
         Sponsor s = null;
         try {
         	//STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(dbUrl, user, pass);
             
-        	//conn = GeneralUserConnection.getUserConnection();
          // STEP 4.1: creazione ed esecuzione della query
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
@@ -44,18 +50,18 @@ public class SponsorDao {
             rs.first();
             
          // lettura colonne
-            String usrnm = rs.getString("username");
-            String psswrd = rs.getString("password");
-            String activity = rs.getString("activity");
-            String capacity = rs.getString("capacity");
-            String description = rs.getString("description");
+            String usrnm = rs.getString(u);
+            String psswrd = rs.getString(p);
+            String activity = rs.getString(a);
+            String capacity = rs.getString(c);
+            String description = rs.getString(d);
             
          //create entity
             s = new Sponsor(usrnm, psswrd, activity, capacity, description);
             // STEP 6: Clean-up dell'ambiente
             rs.close();
             stmt.close();
-            //UserConnection.closeUserConnection();
+            
             conn.close();
         } catch (SQLException se) {
             // Errore durante l'apertura della connessione
@@ -88,12 +94,12 @@ public class SponsorDao {
         Sponsor s = null;
         try {
         	//STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(dbUrl, user, pass);
             
-        	//conn = GeneralUserConnection.getUserConnection();
+        	
          // STEP 4.1: creazione ed esecuzione della query
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
@@ -107,11 +113,11 @@ public class SponsorDao {
             rs.first();
             
          // lettura colonne
-            String usrnm = rs.getString("username");
-            String psswrd = rs.getString("password");
-            String activity = rs.getString("activity");
-            String capacity = rs.getString("capacity");
-            String description = rs.getString("description");
+            String usrnm = rs.getString(u);
+            String psswrd = rs.getString(p);
+            String activity = rs.getString(a);
+            String capacity = rs.getString(c);
+            String description = rs.getString(d);
             if (!usrnm.equals(username)|| !psswrd.equals(password)) {
             	//controllo 
             	return null;
@@ -121,7 +127,7 @@ public class SponsorDao {
             // STEP 6: Clean-up dell'ambiente
             rs.close();
             stmt.close();
-            //UserConnection.closeUserConnection();
+            
             conn.close();
         } catch (SQLException se) {
             // Errore durante l'apertura della connessione
@@ -151,14 +157,14 @@ public class SponsorDao {
 	public List<Sponsor> getSponsors(){
 		Statement stmt = null;
         Connection conn = null;
-        List<Sponsor> sponsors = new ArrayList<Sponsor>();
+        List<Sponsor> sponsors = new ArrayList<>();
         
         try {
         	//STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(dbUrl, user, pass);
             
             
         	
@@ -169,7 +175,7 @@ public class SponsorDao {
             ResultSet rs = stmt.executeQuery(sql);
             
             if (!rs.first()) { // rs not empty
-            	return null;
+            	return sponsors;
             }
          // riposizionamento del cursore
             rs.first();
@@ -224,10 +230,10 @@ public class SponsorDao {
         
         try {
         	// STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS); 
+            conn = DriverManager.getConnection(dbUrl, user, pass); 
             
         	
          // STEP 4.1: creazione ed esecuzione della query

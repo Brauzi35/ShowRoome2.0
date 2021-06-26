@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import logic.applicationController.HomepageArtistController;
+import logic.appcontroller.HomepageArtistController;
 import logic.bean.EventBean;
 import web.model.Employee;
 import web.entity.Artist;

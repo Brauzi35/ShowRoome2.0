@@ -14,7 +14,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import logic.applicationController.HostShowSponsorController;
+import logic.appcontroller.HostShowSponsorController;
 import logic.dao.SponsorDao;
 import logic.exceptions.PendingRequestException;
 
@@ -60,7 +60,7 @@ public class ControllerHostShowSponsor implements Initializable {
     	 try {
 			sd.createSSQueue(title, artist, partner, description);
 		} catch (PendingRequestException e) {
-			// TODO Auto-generated catch block
+			//implementare logica di errore
 			e.printStackTrace();
 		}
 	    }

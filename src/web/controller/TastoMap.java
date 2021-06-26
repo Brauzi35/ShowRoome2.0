@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import web.model.Employee;   
 import javax.servlet.http.HttpSession;
 
-import logic.applicationController.MapController;
+import logic.appcontroller.MapController;
 import logic.bean.EventBean;
 import logic.utils.SessionArtist;
 import logic.utils.SessionSponsor;

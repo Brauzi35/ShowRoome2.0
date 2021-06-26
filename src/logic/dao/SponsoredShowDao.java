@@ -8,19 +8,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import logic.entity.Artist;
-import logic.entity.RequestedShow;
+
 import logic.entity.SponsoredShow;
 import logic.exceptions.DescriptionTooLongException;
-import logic.utils.SessionSponsor;
+
 import logic.utils.SessionUser;
 
 public class SponsoredShowDao {
 	
-	private static String USER = "root";
-	private static String PASS = "showroome";
-    private static String DB_URL = "jdbc:mysql://localhost:3306/prova?autoReconnect=true&useSSL=false";
-	private static String DRIVER_CLASS_NAME = "com.mysql.cj.jdbc.Driver";
+	private static String user = "root";
+	private static String pass = "showroome";
+    private static String dbUrl = "jdbc:mysql://localhost:3306/prova?autoReconnect=true&useSSL=false";
+	private static String driverClassName = "com.mysql.cj.jdbc.Driver";
 	
 	public SponsoredShow getSponsoredShow(String title) {
 		Statement stmt = null;
@@ -28,10 +27,10 @@ public class SponsoredShowDao {
         SponsoredShow result = null;
         try {
         	//STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(dbUrl, user, pass);
             
          // STEP 4.1: creazione ed esecuzione della query
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
@@ -90,10 +89,10 @@ public class SponsoredShowDao {
         
         try {
         	// STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS); 
+            conn = DriverManager.getConnection(dbUrl, user, pass); 
             
         	
          // STEP 4.1: creazione ed esecuzione della query
@@ -134,10 +133,10 @@ public class SponsoredShowDao {
         
         try {
         	// STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS); 
+            conn = DriverManager.getConnection(dbUrl, user, pass); 
             
         	
          // STEP 4.1: creazione ed esecuzione della query
@@ -181,10 +180,10 @@ public class SponsoredShowDao {
         
         try {
         	//STEP 2: loading dinamico del driver mysql
-            Class.forName(DRIVER_CLASS_NAME);
+            Class.forName(driverClassName);
             
          // STEP 3: apertura connessione
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(dbUrl, user, pass);
             
             
         	
@@ -195,7 +194,7 @@ public class SponsoredShowDao {
             ResultSet rs = stmt.executeQuery(sql);
             
             if (!rs.first()) { // rs not empty
-            	return null;
+            	return shows;
             }
          // riposizionamento del cursore
             rs.first();

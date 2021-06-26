@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
     <%@page import = " logic.bean.SponsoredShowBean" %>
-    <%@page import = " logic.applicationController.SSUserController" %>
+    <%@page import = " logic.appcontroller.SSUserController" %>
     <%@ page import = "java.util.List" %>
      <%@ page import = "java.util.ArrayList" %>
 <%

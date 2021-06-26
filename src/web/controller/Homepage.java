@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import logic.applicationController.HomepageArtistController;
-import logic.applicationController.HomepageSponsorController;
+import logic.appcontroller.HomepageArtistController;
+import logic.appcontroller.HomepageSponsorController;
 import logic.utils.SessionArtist;
 import logic.utils.SessionSponsor;
 import logic.utils.SessionUser;

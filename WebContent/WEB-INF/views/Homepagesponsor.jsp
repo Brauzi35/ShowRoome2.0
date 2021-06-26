@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
     <%@page import = "logic.utils.SessionSponsor"  %>
-    <%@page import = "logic.applicationController.SessionSponsorController"  %>
+    <%@page import = "logic.appcontroller.SessionSponsorController"  %>
  <%
  SessionSponsorController ssc = new SessionSponsorController();
 	ssc.sessionSponsorSetup();
