@@ -25,7 +25,7 @@ public class ArtistDao {
 	public Artist getArtist(String name) {
 		Statement stmt = null;
         Connection conn = null;
-        Artist a= null;
+        Artist art= null;
         
         try {
         	//STEP 2: loading dinamico del driver mysql
@@ -54,7 +54,7 @@ public class ArtistDao {
             String description = rs.getString(ds);
             String talent = rs.getString(tl);
          //create entity
-            a = new Artist(usrnm, psswrd, email, description, talent);
+            art = new Artist(usrnm, psswrd, email, description, talent);
             // STEP 6: Clean-up dell'ambiente
             rs.close();
             stmt.close();
@@ -80,7 +80,7 @@ public class ArtistDao {
                 se.printStackTrace();
             }
         }
-		return a;
+		return art;
         	
 	}
 	
