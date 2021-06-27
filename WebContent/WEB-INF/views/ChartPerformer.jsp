@@ -62,7 +62,7 @@
     </p>
     <h1 style=" margin-top: -180px;margin-left: 300px;"> <label form="Descrizione artista">Le tue recensioni</label></h1>
     
-     
+   <ul> 
    <li> <h3 style=" margin-top: px;margin-left: 300px;"><ul>
    
       <% try{
@@ -79,7 +79,7 @@
   
   <%} %>
       
-       
+      </ul>  
     
   
   </body>

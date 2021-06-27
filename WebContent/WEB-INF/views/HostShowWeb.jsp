@@ -56,7 +56,7 @@
          <form action="HostShowWebController" method="post">
 
  <h3 style="margin-top: -180px; margin-left: 580px;">  Compila richiesta:  </h3>
-
+<ul>
   <li  style=" list-style-type:none;">
       <h3 style=" margin-top: px;margin-left: 500px;">
         <ul>
@@ -73,7 +73,7 @@
            
       </h3>
     </li>
-   
+   </ul>
     <input id="Submit" name="Profile" type="submit" value="Invia richiesta"  style="height: 35px; width: 95px; margin-top: 80px; margin-left: 650px;background-color: #4D4D4D;"></input>
    
    </p>

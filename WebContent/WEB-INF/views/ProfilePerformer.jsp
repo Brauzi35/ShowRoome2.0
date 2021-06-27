@@ -56,6 +56,7 @@ value="Login" size="65" maxlength="40" ;style="background-color:" #10030f="" typ
     alt=""   style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
     <h2 style=" margin-top: -180px;margin-left: 300px;"> <label form="Descrizione artista"></label></h2>
+    <ul>
     <li>
       <h3 style=" margin-top: px;margin-left: 400px;">
         <ul>
@@ -81,6 +82,7 @@ value="Login" size="65" maxlength="40" ;style="background-color:" #10030f="" typ
            
       </h3>
     </li>
+    </ul>
     <form action="&lt;%= request.getContextPath() %&gt;/register" method="post">
       <button name="Dona" style="height: 35px; width: 90px; margin-top: -150px; margin-left:520px; background-color: #4d4d4d;">Modifica</button>
     </form>
