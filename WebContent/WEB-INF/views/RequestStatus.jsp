@@ -24,7 +24,7 @@
     
  
 <!DOCTYPE html>
-<html>
+<html  lang="it">
   <head>
     <title>Prova</title>
   </head>
@@ -64,7 +64,7 @@
     
     <% if(control.equals("ok") ){ %>
     <h1 style="margin-top: 120px;" >Le tue richieste:</h1>
-     <p style="margin-top: 210px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
+     <p style="margin-top: 210px; margin-left: 5px;"> <img alt="" src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
  
 

@@ -19,7 +19,7 @@
     int size = events.size();
 %>
 <!DOCTYPE html>
-<html>
+<html  lang="it">
 
   <head>
    <script src="https://www.paypal.com/sdk/js?currency=EUR&client-id=ASMN00dOM4cH1cFqKX7v1J9auNbG9yaEt2g31rZ4ID8RE8RWmNxdFrT3UEaXWUgS1x510P4QH2SJj7eX"> </script>
@@ -70,7 +70,7 @@
     	 artist1 = "no review found";
      }
     %> 
-    <p style="margin-top: 300px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
+    <p style="margin-top: 300px; margin-left: 5px;"> <img alt="" src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
       style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     
@@ -105,7 +105,7 @@
 
 <!-- secondo artista --> 
 
-   <p style="margin-top: 280px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
+   <p style="margin-top: 280px; margin-left: 5px;"> <img alt="" src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
         h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     
@@ -139,7 +139,7 @@
     <% }%>
         <%if(!artist3.equals("no artist found")){ %>
     
-   <p style="margin-top: 250px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
+   <p style="margin-top: 250px; margin-left: 5px;"> <img alt="" src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
         h1="" style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     

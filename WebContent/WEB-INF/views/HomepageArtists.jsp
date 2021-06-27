@@ -20,7 +20,7 @@
 
 
 <!DOCTYPE html>
-<html>
+<html  lang="it">
   <head>
     <title>Prova</title>
   </head>
@@ -67,15 +67,16 @@
      
     </h1>
     <!-- Primo artista  -->
-    <p style="margin-top: 300px; margin-left: 5px;"> <img src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
+    <p style="margin-top: 300px; margin-left: 5px;"> <img  alt="" src="https://www.focusjunior.it/content/uploads/2018/10/Michelangelo-Buonarroti.jpg"
 
  
 
         style="width: 235px; height: 155px; margin-left: -4px; margin-top: -357px;">
     </p>
     <h2 style=" margin-top: -180px;margin-left: 300px;"> <label form="Descrizione artista"></label></h2>
+    <ul>
     <li>
-      <h3 style=" margin-top: px;margin-left: 400px;">
+      <h3 style=" margin-top: 100px;margin-left: 400px;">
         <ul>
           <input readonly="readonly" value=<%= instanceA.getUsername() %> id="Nome" name="Nome" style="height: 25px; width: 225px;"
 
@@ -106,6 +107,7 @@
            
       </h3>
     </li>
+    </ul>
     <form action="&lt;%= request.getContextPath() %&gt;/register" method="post">
       <button name="Dona" style="height: 35px; width: 90px; margin-top: -150px; margin-left:520px; background-color: #4d4d4d;">Modifica</button>
     </form>
