@@ -39,24 +39,24 @@ public class ArtistDao {
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
             String sql = "SELECT * FROM artists WHERE username = '" +name+"'";
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rset = stmt.executeQuery(sql);
             
-            if (!rs.first()) { // rs not empty
+            if (!rset.first()) { // rs not empty
             	return null;
             }
          // riposizionamento del cursore
-            rs.first();
+            rset.first();
             
          // lettura colonne
-            String usrnm = rs.getString(un);
-            String psswrd = rs.getString(ps);
-            String email = rs.getString(em);
-            String description = rs.getString(ds);
-            String talent = rs.getString(tl);
+            String usrnm = rset.getString(un);
+            String psswrd = rset.getString(ps);
+            String email = rset.getString(em);
+            String description = rset.getString(ds);
+            String talent = rset.getString(tl);
          //create entity
             art = new Artist(usrnm, psswrd, email, description, talent);
             // STEP 6: Clean-up dell'ambiente
-            rs.close();
+            rset.close();
             stmt.close();
             conn.close();
         } catch (SQLException se) {
