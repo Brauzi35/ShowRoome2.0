@@ -19,7 +19,6 @@ public class Testselenium2 {
 	   driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("password");
        driver.findElement(By.xpath("/html/body/p[2]/input")).click();
 	   
-       String value = driver.findElement(By.xpath("/html/body/h1[4]/input")).getText();
      
 
 

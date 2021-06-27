@@ -12,7 +12,7 @@ import org.junit.Test;
 public class Test13 {
 
 	@Test
- public	void test() throws Exception {
+ public	void test() {
 			
 		EventDao eventdao = new EventDao();
   Event    check = eventdao.getEvent("Flavietta");
