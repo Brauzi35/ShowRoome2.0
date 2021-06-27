@@ -73,7 +73,7 @@
     
    <p     style="margin-top: -190px; margin-left: 600px;"  >
        
-
+<ul>
  
 
   <li  style=" list-style-type:none;">
@@ -104,6 +104,7 @@
            
       </h3>
     </li>
+    </ul>
     <% if(state.equals("yes")){ %>
     <textarea  readonly="readonly" id="Submit" name="Profile" type="submit" value="Invia richiesta"  style="resize:none;height: 35px; width: 95px; margin-top: -600px; margin-left: 1050px;background-color:purple ;"> Richiesta accettata</textarea>
     <form action="RequestStatusController" method="get">
