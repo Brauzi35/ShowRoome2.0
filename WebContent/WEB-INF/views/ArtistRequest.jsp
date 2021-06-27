@@ -77,8 +77,8 @@
 
 <!--              qui mettere if   -->
 <% if (!state.equals("no requests found") && show.getApprovedArtist().equals("no")){ %>
- <h1>Le tue Proposte:</h1>
- <p style="margin-top: 210px; margin-left: 5px;"> <img alt="" src="https://www.cosafarearoma.it/wp-content/uploads/2014/06/Trinity-College-Irish-Pub-Roma.jpg"
+ <h1 style="margin-top: 110px;">Le tue Proposte:</h1>
+ <p style="margin-top: 200px; margin-left: 5px;"> <img alt="" src="https://www.cosafarearoma.it/wp-content/uploads/2014/06/Trinity-College-Irish-Pub-Roma.jpg"
 
  
 
@@ -88,10 +88,10 @@
    <p     style="margin-top: -190px; margin-left: 600px;"  >
          <form action="ArtistRequestController" method="post">
 
- 
+ <ul>
 
   <li  style=" list-style-type:none;">
-      <h3 style=" margin-top: px;margin-left: 500px;">
+      <h3 style=" margin-top: 100px;margin-left: 500px;">
         <ul>
           <textarea   readonly="readonly" value="nome" id="nome" name="nome" style="resize:none;height: 25px; width: 300px;" type="text"><%= list.get(0) %></textarea>
         </ul>
@@ -101,17 +101,14 @@
           <textarea   readonly="readonly"  id="Cognome" name="Cognome" style="resize:none;height: 80px; width: 300px;" type="text"><%= show.getDescription() %></textarea>
         </ul>
         <ul>
-          <textarea  readonly="readonly"   id="password" name="password"
-
- 
-
-            style="resize:none;height: 25px; width: 300px;" type="text"><%= show.getHost() %></textarea>
+          <textarea  readonly="readonly"   id="password" name="password"  style="resize:none;height: 25px; width: 300px;" type="text"><%= show.getHost() %></textarea>
             
         </ul>
         
            
       </h3>
     </li>
+    </ul>
     <input readonly="readonly" id="Submit" name="button" type="submit" value="Accetta"  style="resize:none;height: 35px; width: 95px; margin-top: -600px; margin-left: 1050px;background-color:purple ;"> 
       <input readonly="readonly" id="Submit" name="button" type="submit" value="Rifiuta"  style="resize:none;height: 35px; width: 95px; margin-top: -600px; margin-left: 950px;background-color:purple ;"> 
   
@@ -121,13 +118,13 @@
 
  
 <% if(!state.equals("no requests found") && show.getApprovedArtist().equals("refused")){ %>
- <h1>Le tue Proposte:</h1>
-	<p style="margin-top: 70px; margin-left: 600px;"  ><h1>La richiesta e' stata rifiutata, attendi che l'host la dismetta</h1></p>
+ <h1 style="margin-top: 110px;">Le tue Proposte:</h1>
+	<p style="margin-top: 90px; margin-left: 600px;"  ><h1>La richiesta e' stata rifiutata, attendi che l'host la dismetta</h1></p>
 <% }%>
 
 <% if(!state.equals("no requests found") && show.getApprovedArtist().equals("yes")){ %>
- <h1>Le tue Proposte:</h1>
-	<p style="margin-top: 70px; margin-left: 600px;"  ><h1>La richiesta e' stata accettata, attendi che l'host dia il via allo show</h1></p>
+ <h1 style="margin-top: 110px;">Le tue Proposte:</h1>
+	<p style="margin-top: 90px; margin-left: 600px;"  ><h1>La richiesta e' stata accettata, attendi che l'host dia il via allo show</h1></p>
 <% }%>
    
   <!--              qui mettere else -->
