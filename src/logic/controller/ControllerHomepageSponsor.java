@@ -15,16 +15,16 @@ import logic.appcontroller.SessionSponsorController;
 import logic.utils.SessionSponsor;
 
 public class ControllerHomepageSponsor implements Initializable{
-
+	
     @FXML
     private AnchorPane rootpane7;
-
+    
     @FXML
     private Button dismissButton;
 
     @FXML
     private Label titleLabel;
-
+    //this is not duplicated
     @FXML
     private Button editButton;
 
@@ -80,7 +80,7 @@ public class ControllerHomepageSponsor implements Initializable{
 
     @FXML
     void saveClick(ActionEvent event) {
-
+    	//dummy
     }
 
 	@Override
