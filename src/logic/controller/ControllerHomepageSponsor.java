@@ -17,19 +17,19 @@ import logic.utils.SessionSponsor;
 public class ControllerHomepageSponsor implements Initializable{
 	
     @FXML
-    private AnchorPane rootpane7;
+    private AnchorPane rootpaneHPS;
     
     @FXML
-    private Button dismissButton;
+    private Button dismissButtonHPS;
 
     @FXML
-    private Label titleLabel;
-    //this is not duplicated
+    private Label titleLabelHPS;
+    
     @FXML
-    private Button editButton;
+    private Button editButtonHPS;
 
     @FXML
-    private Label username;
+    private Label usernameHPS;
 
     @FXML
     private Label activity;
@@ -95,7 +95,7 @@ public class ControllerHomepageSponsor implements Initializable{
 		SessionSponsorController ssc = new SessionSponsorController();
 		ssc.sessionSponsorSetup();
 		SessionSponsor ss = SessionSponsor.getInstance();
-		username.setText(ss.getUsername());
+		usernameHPS.setText(ss.getUsername());
 		activity.setText(ss.getActivity());
 		capacity.setText(ss.getCapacity());
 		description.setText(ss.getDescription());
