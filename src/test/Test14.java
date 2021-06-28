@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.List;
 
-import logic.applicationController.RSSApplicationController;
+import logic.appcontroller.RSSApplicationController;
 import   logic.bean.RequestedShowBean;
 
 public class Test14 {

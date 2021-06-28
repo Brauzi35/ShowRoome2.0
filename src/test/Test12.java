@@ -3,7 +3,7 @@ package test;
 import static org.junit.Assert.*;
 import logic.bean.ArtistBean;
 import logic.exceptions.LoginException;
-import logic.applicationController.LoginController;
+import logic.appcontroller.LoginController;
 import org.junit.Test;
 public class  Test12 {
 

@@ -3,7 +3,7 @@ package test;
 import static org.junit.Assert.*;
 import logic.bean.ArtistBean;
 import logic.bean.GeneralUserBean;
-import logic.applicationController.HomepageArtistController;
+import logic.appcontroller.HomepageArtistController;
 import logic.bean.EventBean;
 import logic.dao.EventDao;
 import logic.entity.Event;

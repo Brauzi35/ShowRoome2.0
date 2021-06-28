@@ -8,11 +8,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Testselenium {
+public class TestSelenium {
    public static void main(String[] args) {
 	   System.setProperty("webdriver.chrome.driver","Driver/chromedriver.exe");
 	   WebDriver driver = new ChromeDriver();
-	   driver.get("http://localhost:8080/FinaleIspw/register");
+	   driver.get("http://localhost:8080/ShowRoomeFinal/register");
 	   driver.findElement(By.xpath("//*[@id=\"username\"]")).clear();
 	   driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("valerio");
 	   driver.findElement(By.xpath("//*[@id=\"password\"]")).clear();

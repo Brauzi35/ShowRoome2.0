@@ -6,7 +6,7 @@ import org.junit.Test;
 
 
 import java.util.List;
-import logic.applicationController. RequestsArtistController;
+import logic.appcontroller. RequestsArtistController;
 
 import logic.bean.SponsorBean;
 
