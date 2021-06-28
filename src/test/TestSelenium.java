@@ -8,18 +8,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TestSelenium {
+public class Testselenium {
    public static void main(String[] args) {
 	   System.setProperty("webdriver.chrome.driver","Driver/chromedriver.exe");
-	   WebDriver driver = new ChromeDriver();
-	   driver.get("http://localhost:8080/ShowRoomeFinal/register");
-	   driver.findElement(By.xpath("//*[@id=\"username\"]")).clear();
-	   driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("valerio");
-	   driver.findElement(By.xpath("//*[@id=\"password\"]")).clear();
-	   driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("valeprova");
+	   WebDriver driver1 = new ChromeDriver();
+	   driver1.get("http://localhost:8080/FinaleIspw/register");
+	   driver1.findElement(By.xpath("//*[@id=\"username\"]")).clear();
+	   driver1.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("valerio");
+	   driver1.findElement(By.xpath("//*[@id=\"password\"]")).clear();
+	   driver1.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("valeprova");
 
-	   driver.findElement(By.xpath("/html/body/p[2]/input")).click();
-	   driver.close();
+	   driver1.findElement(By.xpath("/html/body/p[2]/input")).click();
+	   driver1.close();
 	  
    }
 }
